@@ -17,6 +17,7 @@ public class UIController : MonoBehaviour
     [SerializeField] TextMeshProUGUI OpponentText;
 
     [SerializeField] GameObject GameOverOverlay;
+    public float ShakeStrength = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -64,6 +65,16 @@ public class UIController : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
+    }
+
+    public void ScreenShakeSmall()
+    {
+        ShakeStrength = 5;
+    }
+
+    public void ScreenShakeBig()
+    {
+        ShakeStrength = 10;
     }
 
     public void GameOverTransition()

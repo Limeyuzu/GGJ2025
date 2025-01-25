@@ -11,6 +11,7 @@ public class GameState : MonoBehaviour
     public int CurrentOpponent = 0;
     public int CurrentOpponentInteraction = 0;
     public int CurrentOpponentPositiveInteractions = 0;
+    public Dialogue LastResolvedDialogue;
     public Character CurrentCharacter;
 
     // Character state
@@ -24,6 +25,7 @@ public class GameState : MonoBehaviour
 
     public void GoToNextInteraction()
     {
+        CheckScreenShake();
         ResolveGameOver();
 
         if (!HasNextInteraction())
@@ -46,6 +48,8 @@ public class GameState : MonoBehaviour
 
     public void ResolveInteraction(Dialogue dialogue)
     {
+        LastResolvedDialogue = dialogue;
+
         Stress += dialogue.StressToAdd;
         if (dialogue.IsPositiveOption)
         {
@@ -78,5 +82,20 @@ public class GameState : MonoBehaviour
         var currentInteraction = CurrentCharacter.GetInteractions()[CurrentOpponentInteraction];
         CurrentOpponentInteraction++;
         return currentInteraction;
+    }
+
+    private void CheckScreenShake()
+    {
+        if (LastResolvedDialogue.PlayerText != "" && !LastResolvedDialogue.IsPositiveOption)
+        {
+            if (LastResolvedDialogue.StressToAdd > 5)
+            {
+                UIController.ScreenShakeBig();
+            }
+            else
+            {
+                UIController.ScreenShakeSmall();
+            }
+        }
     }
 }
