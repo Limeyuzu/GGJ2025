@@ -1,21 +1,19 @@
+using System.Linq;
 using UnityEngine;
 
-public class AddButton : MonoBehaviour
+public class DebugButton : MonoBehaviour
 {
     [SerializeField] Transform LeftButtonPanel;
     [SerializeField] Transform RightButtonPanel;
     [SerializeField] GameObject ButtonPrefab;
+    [SerializeField] int AmountOfStressToAdd = 5;
+
+    private GameState _gameState;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        _gameState = FindObjectsByType<GameState>(FindObjectsSortMode.None).First();
     }
 
     public void AddButtonToPanel()
@@ -25,5 +23,10 @@ public class AddButton : MonoBehaviour
         var newButton = Instantiate(ButtonPrefab, panelToUse);
         newButton.transform.SetParent(panelToUse);
         newButton.transform.SetAsLastSibling();
+    }
+
+    public void AddStress()
+    {
+        _gameState.Stress += AmountOfStressToAdd;
     }
 }
