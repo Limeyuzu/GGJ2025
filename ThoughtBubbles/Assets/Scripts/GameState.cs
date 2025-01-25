@@ -46,7 +46,7 @@ public class GameState : MonoBehaviour
         UIController.SetPrompt(interaction.Prompt);
     }
 
-    public void ResolveInteraction(Dialogue dialogue)
+    public void ResolvePlayerSelection(Dialogue dialogue)
     {
         LastResolvedDialogue = dialogue;
 
@@ -59,6 +59,11 @@ public class GameState : MonoBehaviour
         UIController.ClearDialogueButtons();
 
         UIController.GoToSideBySideView(dialogue.PlayerText, dialogue.OpponentText);
+    }
+
+    public void ResolvePlayerSpeech()
+    {
+        UIController.GoToOpponentSpeech();
     }
 
     private void ResolveGameOver()

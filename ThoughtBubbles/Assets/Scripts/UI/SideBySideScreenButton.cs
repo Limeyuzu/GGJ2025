@@ -11,7 +11,12 @@ public class SideBySideScreenButton : MonoBehaviour
         _gameState = FindObjectsByType<GameState>(FindObjectsSortMode.None).First();
     }
 
-    public void OnClick()
+    public void ResolvePlayerSpeech()
+    {
+        _gameState.ResolvePlayerSpeech();
+    }
+
+    public void ResolveOpponentSpeech()
     {
         _gameState.GoToNextInteraction();
     }

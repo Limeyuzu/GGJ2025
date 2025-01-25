@@ -22,6 +22,6 @@ public class DialogueButton : MonoBehaviour
 
     public void ClickDialogue()
     {
-        _gameState.ResolveInteraction(_dialogue);
+        _gameState.ResolvePlayerSelection(_dialogue);
     }
 }

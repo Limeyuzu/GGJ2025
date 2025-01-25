@@ -36,6 +36,14 @@ public class UIController : MonoBehaviour
         OpponentText.text = responseText;
         SelectionScreen.SetActive(false);
         SideBySideScreen.SetActive(true);
+        PlayerText.gameObject.SetActive(true);
+        OpponentText.gameObject.SetActive(false);
+    }
+
+    public void GoToOpponentSpeech()
+    {
+        PlayerText.gameObject.SetActive(false);
+        OpponentText.gameObject.SetActive(true);
     }
 
     public void GoToDialogueView()

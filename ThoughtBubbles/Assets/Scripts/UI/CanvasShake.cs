@@ -12,7 +12,8 @@ public class CanvasShake : MonoBehaviour
         _initialPosition = transform.position;
     }
 
-    // Update is called once per frame
+    // This feels like a terrible way to do camera shake, but it's the canvas that needs to shake not the game world
+    // For now this is all I can do for a game jam
     void Update()
     {
         transform.position = _initialPosition + (Vector3)(Random.insideUnitCircle * _uiController.ShakeStrength);
