@@ -1,6 +1,7 @@
 using Assets.GenericTools.Event;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
@@ -13,8 +14,14 @@ public class UIController : MonoBehaviour
 
     // Side by side screen
     [SerializeField] GameObject SideBySideScreen;
+    [SerializeField] Image PlayerNormalSprite;
+    [SerializeField] Image PlayerAltSprite;
     [SerializeField] TextMeshProUGUI PlayerText;
+    [SerializeField] Image PlayerTextPlayerSprite;
+    [SerializeField] Image PlayerTextOpponentSprite;
     [SerializeField] TextMeshProUGUI OpponentText;
+    [SerializeField] Image OpponentTextPlayerSprite;
+    [SerializeField] Image OpponentTextOpponentSprite;
 
     [SerializeField] GameObject GameOverOverlay;
     public float ShakeStrength = 0;
@@ -30,10 +37,15 @@ public class UIController : MonoBehaviour
         PromptField.text = text;
     }
 
-    public void GoToSideBySideView(string chosenDialogue, string responseText)
+    public void GoToSideBySideView(Dialogue dialogue, Character currentOpponent)
     {
-        PlayerText.text = chosenDialogue;
-        OpponentText.text = responseText;
+        PlayerText.text = dialogue.PlayerText;
+        PlayerTextPlayerSprite.sprite = PlayerNormalSprite.sprite;
+        PlayerTextOpponentSprite.sprite = currentOpponent.GetMainSprite();
+        OpponentText.text = dialogue.OpponentText;
+        OpponentTextPlayerSprite.sprite = dialogue.IsPositiveOption ? PlayerNormalSprite.sprite : PlayerAltSprite.sprite;
+        OpponentTextOpponentSprite.sprite = dialogue.IsPositiveOption ? currentOpponent.GetMainSprite() : currentOpponent.GetAltSprite();
+
         SelectionScreen.SetActive(false);
         SideBySideScreen.SetActive(true);
         PlayerText.gameObject.SetActive(true);

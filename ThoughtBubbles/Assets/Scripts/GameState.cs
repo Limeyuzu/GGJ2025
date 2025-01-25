@@ -7,15 +7,15 @@ public class GameState : MonoBehaviour
     [SerializeField] List<string> CharacterOrder = new() { "Biv" };
     [SerializeField] UIController UIController;
 
-    // Game state
-    public int CurrentOpponent = 0;
-    public int CurrentOpponentInteraction = 0;
-    public int CurrentOpponentPositiveInteractions = 0;
-    public Dialogue LastResolvedDialogue;
-    public Character CurrentCharacter;
-
     // Character state
     public int Stress = 0;
+
+    // Game state
+    private int _currentOpponent = 0;
+    private int _currentOpponentInteraction = 0;
+    private int _currentOpponentPositiveInteractions = 0;
+    private Dialogue _lastResolvedDialogue;
+    private Character _currentCharacter;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -48,17 +48,17 @@ public class GameState : MonoBehaviour
 
     public void ResolvePlayerSelection(Dialogue dialogue)
     {
-        LastResolvedDialogue = dialogue;
+        _lastResolvedDialogue = dialogue;
 
         Stress += dialogue.StressToAdd;
         if (dialogue.IsPositiveOption)
         {
-            CurrentOpponentPositiveInteractions++;
+            _currentOpponentPositiveInteractions++;
         }
 
         UIController.ClearDialogueButtons();
 
-        UIController.GoToSideBySideView(dialogue.PlayerText, dialogue.OpponentText);
+        UIController.GoToSideBySideView(dialogue, _currentCharacter);
     }
 
     public void ResolvePlayerSpeech()
@@ -76,24 +76,24 @@ public class GameState : MonoBehaviour
 
     private void InitCharacter()
     {
-        CurrentCharacter = GameObject.Find(CharacterOrder[CurrentOpponent]).GetComponent<Character>();
+        _currentCharacter = GameObject.Find(CharacterOrder[_currentOpponent]).GetComponent<Character>();
         GoToNextInteraction();
     }
 
-    private bool HasNextInteraction() => CurrentOpponentInteraction < CurrentCharacter.GetInteractions().Count;
+    private bool HasNextInteraction() => _currentOpponentInteraction < _currentCharacter.GetInteractions().Count;
 
     private Interaction GetNextInteraction()
     {
-        var currentInteraction = CurrentCharacter.GetInteractions()[CurrentOpponentInteraction];
-        CurrentOpponentInteraction++;
+        var currentInteraction = _currentCharacter.GetInteractions()[_currentOpponentInteraction];
+        _currentOpponentInteraction++;
         return currentInteraction;
     }
 
     private void CheckScreenShake()
     {
-        if (LastResolvedDialogue.PlayerText != "" && !LastResolvedDialogue.IsPositiveOption)
+        if (!_lastResolvedDialogue?.IsPositiveOption ?? false)
         {
-            if (LastResolvedDialogue.StressToAdd > 5)
+            if (_lastResolvedDialogue.StressToAdd > 5)
             {
                 UIController.ScreenShakeBig();
             }
