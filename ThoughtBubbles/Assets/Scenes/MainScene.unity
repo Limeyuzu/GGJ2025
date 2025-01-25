@@ -314,7 +314,6 @@ MonoBehaviour:
   CurrentOpponentInteraction: 0
   CurrentOpponentPositiveInteractions: 0
   CurrentCharacter: {fileID: 0}
-  PreviousDialogueResponse: 
   Stress: 0
 --- !u!114 &140527062
 MonoBehaviour:
@@ -839,20 +838,39 @@ MonoBehaviour:
       StressToAdd: 10
       PlayerText: "I\u2019m Sir Gi, of house Dragonhorn, Heir to be the head of house."
       OpponentText: Ah, too much Game of Crowns huh?
-  - Prompt: (The next prompt goes here)
+  - Prompt: "Anyway, (he checks his phone before sliding it back.) And there goes
+      the other people who were looking for one more person. (Biv pulls a seat towards
+      him, taking a seat. He offers a seat to Gi to sit down, Gi goes\u2026)"
     Responses:
     - IsPositiveOption: 1
+      StressToAdd: 2
+      PlayerText: So what kind of game engine do you know?
+      OpponentText: More experienced in United, but I can do Real9 Engine too.
+    - IsPositiveOption: 1
       StressToAdd: 0
-      PlayerText: Good option
-      OpponentText: 
+      PlayerText: (Sit down.) Would you be interested in making a group with me?
+      OpponentText: I thought you would never ask. (Biv smiles.)
+    - IsPositiveOption: 1
+      StressToAdd: 0
+      PlayerText: "(Sit down.) I\u2019ll likely just follow you around if that makes
+        finding a group easier."
+      OpponentText: "I can work with that, let\u2019s see who\u2019s available then."
+    - IsPositiveOption: 1
+      StressToAdd: 0
+      PlayerText: "(Look around.) There still seems to be people who haven\u2019t
+        found a group yet."
+      OpponentText: "Then let\u2019s ring them in (Biv shrugs, before chuckling to
+        himself.)"
+    - IsPositiveOption: 1
+      StressToAdd: 0
+      PlayerText: (Look at Biv.) How many Game Jams have you gone to?
+      OpponentText: Too many to count, so how about you follow me for now to see
+        what group we join? (Biv scratches his neck before looking around.)
     - IsPositiveOption: 0
-      StressToAdd: 5
-      PlayerText: Bad option
-      OpponentText: 
-    - IsPositiveOption: 0
-      StressToAdd: 5
-      PlayerText: Bad option
-      OpponentText: 
+      StressToAdd: 100
+      PlayerText: Great! Could you bring those people over here then?
+      OpponentText: "I mean\u2026 never mind, I think I am getting a call from work.
+        (Bev says as he takes a step away and does not return.)"
 --- !u!1 &506509055
 GameObject:
   m_ObjectHideFlags: 0

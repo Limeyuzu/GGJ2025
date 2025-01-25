@@ -12,7 +12,6 @@ public class GameState : MonoBehaviour
     public int CurrentOpponentInteraction = 0;
     public int CurrentOpponentPositiveInteractions = 0;
     public Character CurrentCharacter;
-    public string PreviousDialogueResponse = "";
 
     // Character state
     public int Stress = 0;
@@ -29,7 +28,6 @@ public class GameState : MonoBehaviour
 
         if (!HasNextInteraction())
         {
-            PreviousDialogueResponse = "";
             Debug.Log("Reached end of character!");
             return;
         }
@@ -43,7 +41,7 @@ public class GameState : MonoBehaviour
             UIController.AddDialogueToUI(dialogue);
         }
 
-        UIController.SetPrompt(PreviousDialogueResponse + "\n" + interaction.Prompt);
+        UIController.SetPrompt(interaction.Prompt);
     }
 
     public void ResolveInteraction(Dialogue dialogue)
@@ -54,11 +52,9 @@ public class GameState : MonoBehaviour
             CurrentOpponentPositiveInteractions++;
         }
 
-        PreviousDialogueResponse = dialogue.OpponentText;
-
         UIController.ClearDialogueButtons();
 
-        UIController.GoToSideBySideView(dialogue.PlayerText, PreviousDialogueResponse);
+        UIController.GoToSideBySideView(dialogue.PlayerText, dialogue.OpponentText);
     }
 
     private void ResolveGameOver()
