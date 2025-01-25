@@ -1,0 +1,4 @@
+public enum GameEvent
+{
+    GameOver,
+}

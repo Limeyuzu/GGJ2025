@@ -63,7 +63,7 @@ public class GameState : MonoBehaviour
     {
         if (Stress >= 100)
         {
-            // todo game over
+            UIController.GameOverTransition();
         }
     }
 
