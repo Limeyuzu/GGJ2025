@@ -1,15 +1,11 @@
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class GameState : MonoBehaviour
 {
     // Game setup
     [SerializeField] List<string> CharacterOrder = new() { "Biv" };
-    [SerializeField] Transform LeftButtonPanel;
-    [SerializeField] Transform RightButtonPanel;
-    [SerializeField] GameObject ButtonPrefab;
-    [SerializeField] TextMeshProUGUI PromptField;
+    [SerializeField] UIController UIController;
 
     // Game state
     public int CurrentOpponent = 0;
@@ -27,14 +23,10 @@ public class GameState : MonoBehaviour
         InitCharacter();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void GoToNextInteraction()
     {
+        ResolveGameOver();
+
         if (!HasNextInteraction())
         {
             PreviousDialogueResponse = "";
@@ -46,10 +38,10 @@ public class GameState : MonoBehaviour
         var options = interaction.GetResponses();
         foreach (var dialogue in options)
         {
-            AddDialogueToUI(dialogue);
+            UIController.AddDialogueToUI(dialogue);
         }
 
-        PromptField.text = PreviousDialogueResponse + "\n" + interaction.Prompt;
+        UIController.SetPrompt(PreviousDialogueResponse + "\n" + interaction.Prompt);
     }
 
     public void ResolveInteraction(Dialogue dialogue)
@@ -62,9 +54,17 @@ public class GameState : MonoBehaviour
 
         PreviousDialogueResponse = dialogue.OpponentText;
 
-        ClearDialogueButtons();
+        UIController.ClearDialogueButtons();
 
         GoToNextInteraction();
+    }
+
+    private void ResolveGameOver()
+    {
+        if (Stress >= 100)
+        {
+            // todo game over
+        }
     }
 
     private void InitCharacter()
@@ -80,28 +80,5 @@ public class GameState : MonoBehaviour
         var currentInteraction = CurrentCharacter.GetInteractions()[CurrentOpponentInteraction];
         CurrentOpponentInteraction++;
         return currentInteraction;
-    }
-
-    private void AddDialogueToUI(Dialogue dialogue)
-    {
-        var panelToUse = LeftButtonPanel.childCount <= RightButtonPanel.childCount ? LeftButtonPanel : RightButtonPanel;
-
-        var newButton = Instantiate(ButtonPrefab, panelToUse);
-        newButton.transform.SetParent(panelToUse);
-        newButton.transform.SetAsLastSibling();
-
-        newButton.GetComponent<DialogueButton>().Init(dialogue);
-    }
-
-    private void ClearDialogueButtons()
-    {
-        foreach (Transform child in LeftButtonPanel.transform)
-        {
-            Destroy(child.gameObject);
-        }
-        foreach (Transform child in RightButtonPanel.transform)
-        {
-            Destroy(child.gameObject);
-        }
     }
 }

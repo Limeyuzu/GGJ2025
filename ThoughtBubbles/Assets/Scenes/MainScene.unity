@@ -265,8 +265,9 @@ GameObject:
   m_Component:
   - component: {fileID: 140527060}
   - component: {fileID: 140527061}
+  - component: {fileID: 140527062}
   m_Layer: 0
-  m_Name: GameState
+  m_Name: Global
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -302,16 +303,29 @@ MonoBehaviour:
   CharacterOrder:
   - Biv
   - Two
-  LeftButtonPanel: {fileID: 973479714}
-  RightButtonPanel: {fileID: 763256449}
-  ButtonPrefab: {fileID: 5569259212174772929, guid: 3a8c85af08435e442a531b191ac31710, type: 3}
-  PromptField: {fileID: 2086221215}
+  UIController: {fileID: 140527062}
   CurrentOpponent: 0
   CurrentOpponentInteraction: 0
   CurrentOpponentPositiveInteractions: 0
   CurrentCharacter: {fileID: 0}
   PreviousDialogueResponse: 
   Stress: 0
+--- !u!114 &140527062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140527059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ecce4ed70a5e304cafd0791f147db83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftButtonPanel: {fileID: 973479714}
+  RightButtonPanel: {fileID: 763256449}
+  ButtonPrefab: {fileID: 5569259212174772929, guid: 3a8c85af08435e442a531b191ac31710, type: 3}
+  PromptField: {fileID: 2086221215}
 --- !u!1 &153920604
 GameObject:
   m_ObjectHideFlags: 0
