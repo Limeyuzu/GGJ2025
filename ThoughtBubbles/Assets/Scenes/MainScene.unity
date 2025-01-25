@@ -299,7 +299,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d21c0a089a183d4895e0548e230077c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentOpponentConversations: 0
+  CharacterOrder:
+  - Biv
+  - Two
+  LeftButtonPanel: {fileID: 973479714}
+  RightButtonPanel: {fileID: 763256449}
+  ButtonPrefab: {fileID: 5569259212174772929, guid: 3a8c85af08435e442a531b191ac31710, type: 3}
+  PromptField: {fileID: 2086221215}
+  CurrentOpponent: 0
+  CurrentOpponentInteraction: 0
+  CurrentOpponentPositiveInteractions: 0
+  CurrentCharacter: {fileID: 0}
+  PreviousDialogueResponse: 
   Stress: 0
 --- !u!1 &153920604
 GameObject:
@@ -676,6 +687,95 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315363955}
   m_CullTransparentMesh: 1
+--- !u!1 &454174469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 454174470}
+  - component: {fileID: 454174471}
+  m_Layer: 0
+  m_Name: Biv
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &454174470
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454174469}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1118741397}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &454174471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454174469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feae21ee02ad4874b9d7e916a47a30d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Interactions:
+  - Prompt: "Before I forget, my name is Bev, what\u2019s your name?"
+    Responses:
+    - IsPositiveOption: 1
+      StressToAdd: 0
+      PlayerText: "My name is Gi, I\u2019m currently looking for a group to join
+        up."
+      OpponentText: "Ah, that\u2019s a cool name. Hopefully this year is easier to
+        join up in a group. (Smiles)"
+    - IsPositiveOption: 0
+      StressToAdd: 10
+      PlayerText: Sorry, what was that?
+      OpponentText: "It\u2019s\u2026 nevermind, don\u2019t worry about it"
+    - IsPositiveOption: 0
+      StressToAdd: 0
+      PlayerText: Choyabonga bro.
+      OpponentText: "Confused look I\u2019m squarely in gen z, the boomers are down
+        the hallway."
+    - IsPositiveOption: 1
+      StressToAdd: 0
+      PlayerText: Nah, looking for a group more like.
+      OpponentText: "That makes sense, looks at Gi\u2019s name card. Don\u2019t sweat
+        it Gi, you look capable. (Smiles)"
+    - IsPositiveOption: 0
+      StressToAdd: 100
+      PlayerText: Do you like, spit and lick yourself?
+      OpponentText: "(Disgusted) Yeah no, maybe I\u2019ll find someone else."
+    - IsPositiveOption: 0
+      StressToAdd: 10
+      PlayerText: "I\u2019m Sir Gi, of house Dragonhorn, Heir to be the head of house."
+      OpponentText: Ah, too much Game of Crowns huh?
+  - Prompt: (The next prompt goes here)
+    Responses:
+    - IsPositiveOption: 1
+      StressToAdd: 0
+      PlayerText: Good option
+      OpponentText: 
+    - IsPositiveOption: 0
+      StressToAdd: 5
+      PlayerText: Bad option
+      OpponentText: 
+    - IsPositiveOption: 0
+      StressToAdd: 5
+      PlayerText: Bad option
+      OpponentText: 
 --- !u!1 &506509055
 GameObject:
   m_ObjectHideFlags: 0
@@ -1044,6 +1144,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 840266934}
+  - {fileID: 2086221217}
   - {fileID: 2101337184}
   - {fileID: 973479714}
   - {fileID: 763256449}
@@ -1175,7 +1276,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1281, y: 123.48425}
+  m_AnchoredPosition: {x: 1281, y: 42}
   m_SizeDelta: {x: -1339.3801, y: -158.8765}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &763256450
@@ -1352,7 +1453,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 53.348328, y: 123.48425}
+  m_AnchoredPosition: {x: 53.348328, y: 44}
   m_SizeDelta: {x: -1339.3801, y: -158.8765}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &973479715
@@ -1634,6 +1735,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1118741395
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1118741397}
+  m_Layer: 0
+  m_Name: Characters
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1118741397
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118741395}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 617.9207, y: 317.4813, z: -1.4929488}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 454174470}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1534409296
 GameObject:
   m_ObjectHideFlags: 0
@@ -1784,6 +1917,142 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1534409296}
   m_CullTransparentMesh: 1
+--- !u!1 &2086221214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2086221217}
+  - component: {fileID: 2086221216}
+  - component: {fileID: 2086221215}
+  m_Layer: 5
+  m_Name: Prompt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2086221215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086221214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: This is the prompt
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 72
+  m_fontSizeBase: 108
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 24
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -827.06995, y: -50.19159, z: -824.88776, w: -29.434626}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &2086221216
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086221214}
+  m_CullTransparentMesh: 1
+--- !u!224 &2086221217
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086221214}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 531040568}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -17, y: 457}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2101337183
 GameObject:
   m_ObjectHideFlags: 0
@@ -1836,7 +2105,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2144133755
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1865,5 +2134,6 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 1018049095}
-  - {fileID: 140527060}
   - {fileID: 531040568}
+  - {fileID: 140527060}
+  - {fileID: 1118741397}
