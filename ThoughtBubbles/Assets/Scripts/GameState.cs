@@ -34,6 +34,8 @@ public class GameState : MonoBehaviour
             return;
         }
 
+        UIController.GoToDialogueView();
+
         var interaction = GetNextInteraction();
         var options = interaction.GetResponses();
         foreach (var dialogue in options)
@@ -56,7 +58,7 @@ public class GameState : MonoBehaviour
 
         UIController.ClearDialogueButtons();
 
-        GoToNextInteraction();
+        UIController.GoToSideBySideView(dialogue.PlayerText, PreviousDialogueResponse);
     }
 
     private void ResolveGameOver()

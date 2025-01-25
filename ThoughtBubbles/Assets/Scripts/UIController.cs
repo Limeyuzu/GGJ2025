@@ -4,10 +4,18 @@ using UnityEngine;
 
 public class UIController : MonoBehaviour
 {
+    // Selection Screen
+    [SerializeField] GameObject SelectionScreen;
     [SerializeField] Transform LeftButtonPanel;
     [SerializeField] Transform RightButtonPanel;
     [SerializeField] TextMeshProUGUI PromptField;
     [SerializeField] GameObject ButtonPrefab;
+
+    // Side by side screen
+    [SerializeField] GameObject SideBySideScreen;
+    [SerializeField] TextMeshProUGUI PlayerText;
+    [SerializeField] TextMeshProUGUI OpponentText;
+
     [SerializeField] GameObject GameOverOverlay;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -19,6 +27,20 @@ public class UIController : MonoBehaviour
     public void SetPrompt(string text)
     {
         PromptField.text = text;
+    }
+
+    public void GoToSideBySideView(string chosenDialogue, string responseText)
+    {
+        PlayerText.text = chosenDialogue;
+        OpponentText.text = responseText;
+        SelectionScreen.SetActive(false);
+        SideBySideScreen.SetActive(true);
+    }
+
+    public void GoToDialogueView()
+    {
+        SelectionScreen.SetActive(true);
+        SideBySideScreen.SetActive(false);
     }
 
     public void AddDialogueToUI(Dialogue dialogue)
