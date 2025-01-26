@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: dba6dfead051ae14e96d34c8b183fa71
+guid: 878ad5e6609a6b942bd1b411c86dfa56
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2311659948842064771
-    second: Player_0
+      213: 6723656506305789936
+    second: Portrait_Zoro1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -48,7 +48,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player_0
+      name: Portrait_Zoro1_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 15
-        width: 58
-        height: 67
+        x: 39
+        y: 4
+        width: 52
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d7465c336855befd0800000000000000
-      internalID: -2311659948842064771
+      spriteID: 0ffb91218f93f4d50800000000000000
+      internalID: 6723656506305789936
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Player_0: -2311659948842064771
+      Portrait_Zoro1_0: 6723656506305789936
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
