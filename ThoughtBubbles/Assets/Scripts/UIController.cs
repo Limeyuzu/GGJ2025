@@ -16,9 +16,11 @@ public class UIController : MonoBehaviour
     [SerializeField] GameObject SideBySideScreen;
     [SerializeField] Image PlayerNormalSprite;
     [SerializeField] Image PlayerAltSprite;
+    [SerializeField] GameObject Player;
     [SerializeField] TextMeshProUGUI PlayerText;
     [SerializeField] Image PlayerTextPlayerSprite;
     [SerializeField] Image PlayerTextOpponentSprite;
+    [SerializeField] GameObject Opponent;
     [SerializeField] TextMeshProUGUI OpponentText;
     [SerializeField] Image OpponentTextPlayerSprite;
     [SerializeField] Image OpponentTextOpponentSprite;
@@ -48,14 +50,14 @@ public class UIController : MonoBehaviour
 
         SelectionScreen.SetActive(false);
         SideBySideScreen.SetActive(true);
-        PlayerText.gameObject.SetActive(true);
-        OpponentText.gameObject.SetActive(false);
+        Player.SetActive(true);
+        Opponent.SetActive(false);
     }
 
     public void GoToOpponentSpeech()
     {
-        PlayerText.gameObject.SetActive(false);
-        OpponentText.gameObject.SetActive(true);
+        Player.SetActive(false);
+        Opponent.SetActive(true);
     }
 
     public void GoToDialogueView()
