@@ -49,7 +49,7 @@ MonoBehaviour:
   Sprite: {fileID: 2966872430755497654}
   AltSprite: {fileID: 6749632730050338141}
   Interactions:
-  - Prompt: "Before I forget, my name is Bev, what\u2019s your name?"
+  - Prompt: "Before I forget, my name is Biv, what\u2019s your name?"
     Responses:
     - IsPositiveOption: 1
       StressToAdd: 0
