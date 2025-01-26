@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cc93fa0bd85848d4fb8311daed995182, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d73e1eb72fb8c684788f689bcfb209cf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d73e1eb72fb8c684788f689bcfb209cf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cc93fa0bd85848d4fb8311daed995182, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 5258923131874833726}
   - component: {fileID: 4840949165315195227}
   m_Layer: 0
-  m_Name: Ella
+  m_Name: Oatty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -199,66 +199,66 @@ MonoBehaviour:
   Sprite: {fileID: 3299125226852870296}
   AltSprite: {fileID: 286674806807353826}
   Interactions:
-  - Prompt: "Before I forget, my name is Bev, what\u2019s your name?"
-    Responses:
-    - IsPositiveOption: 1
-      StressToAdd: 0
-      PlayerText: "My name is Gi, I\u2019m currently looking for a group to join
-        up."
-      OpponentText: "Ah, that\u2019s a cool name. Hopefully this year is easier to
-        join up in a group. (Smiles)"
-    - IsPositiveOption: 0
-      StressToAdd: 10
-      PlayerText: Sorry, what was that?
-      OpponentText: "It\u2019s\u2026 nevermind, don\u2019t worry about it"
-    - IsPositiveOption: 0
-      StressToAdd: 0
-      PlayerText: Choyabonga bro.
-      OpponentText: "Confused look I\u2019m squarely in gen z, the boomers are down
-        the hallway."
-    - IsPositiveOption: 1
-      StressToAdd: 0
-      PlayerText: Nah, looking for a group more like.
-      OpponentText: "That makes sense, looks at Gi\u2019s name card. Don\u2019t sweat
-        it Gi, you look capable. (Smiles)"
-    - IsPositiveOption: 0
-      StressToAdd: 100
-      PlayerText: Do you like, spit and lick yourself?
-      OpponentText: "(Disgusted) Yeah no, maybe I\u2019ll find someone else."
-    - IsPositiveOption: 0
-      StressToAdd: 10
-      PlayerText: "I\u2019m Sir Gi, of house Dragonhorn, Heir to be the head of house."
-      OpponentText: Ah, too much Game of Crowns huh?
-  - Prompt: "Anyway, (he checks his phone before sliding it back.) And there goes
-      the other people who were looking for one more person. (Biv pulls a seat towards
-      him, taking a seat. He offers a seat to Gi to sit down, Gi goes\u2026)"
+  - Prompt: "Oatty shredded a paper cup as she turns around to the intruder who disturbed
+      her. \u201CAre you going to tell me what you want, or at least tell me your
+      name?\u201D One of Oatty\u2019s left eye tilts slightly higher than the other."
     Responses:
     - IsPositiveOption: 1
       StressToAdd: 2
-      PlayerText: So what kind of game engine do you know?
-      OpponentText: More experienced in United, but I can do Real9 Engine too.
+      PlayerText: Gi, and we were hoping you would be willing to join our group?
+      OpponentText: "I mean, how big is this group going to be? Over 8 people and
+        I\u2019m out."
+    - IsPositiveOption: 0
+      StressToAdd: 50
+      PlayerText: I hear there are talon gloves if your ones end up shredding paper
+        like that.
+      OpponentText: "Oh, in that case I should spend more money to accommodate someone
+        else\u2019s lack of preparedness? I see, so can you donate me 20 then?"
     - IsPositiveOption: 1
       StressToAdd: 0
-      PlayerText: (Sit down.) Would you be interested in making a group with me?
-      OpponentText: I thought you would never ask. (Biv smiles.)
+      PlayerText: Please join our group?
+      OpponentText: I mean no one else has poached me yet, what is your offer?
+    - IsPositiveOption: 0
+      StressToAdd: 50
+      PlayerText: "Eh\u2026 Biv already said my name? Did you not hear him?"
+      OpponentText: "I heard a bar of soap in a kid\u2019s mouth helps clean their
+        thoughts and mouth. I see that someone's parents didn\u2019t teach their
+        pea brain kid manners."
+    - IsPositiveOption: 0
+      StressToAdd: 10
+      PlayerText: Help Biv, Oatty is scary.
+      OpponentText: "Biv, when the heck did you start adopting kids? Aren\u2019t
+        you registered?"
+  - Prompt: "Oatty, it won\u2019t be like last time at HawkJam-\u201D Oatty cuts
+      him off \u201CIt better not be, especially if you are making promises like
+      that. Did you even consider that I could have joined another group?"
+    Responses:
     - IsPositiveOption: 1
       StressToAdd: 0
-      PlayerText: "(Sit down.) I\u2019ll likely just follow you around if that makes
-        finding a group easier."
-      OpponentText: "I can work with that, let\u2019s see who\u2019s available then."
+      PlayerText: "No, if you were in a team, shouldn\u2019t you be already with
+        them discussing the theme?"
+      OpponentText: Hehe, I guess this one is pretty smart. Fine, I got no group.
+        (Oatty winks)
+    - IsPositiveOption: 0
+      StressToAdd: 50
+      PlayerText: Boom, drop, kick, there is a perfect team here to join instead..
+        (Gi attempts to put on a proud face to beam confidence.)
+      OpponentText: "Yeah? Then you don\u2019t need me if you already have the perfect
+        team."
     - IsPositiveOption: 1
-      StressToAdd: 0
-      PlayerText: "(Look around.) There still seems to be people who haven\u2019t
-        found a group yet."
-      OpponentText: "Then let\u2019s ring them in (Biv shrugs, before chuckling to
-        himself.)"
-    - IsPositiveOption: 1
-      StressToAdd: 0
-      PlayerText: (Look at Biv.) How many Game Jams have you gone to?
-      OpponentText: Too many to count, so how about you follow me for now to see
-        what group we join? (Biv scratches his neck before looking around.)
+      StressToAdd: 2
+      PlayerText: "Why aren\u2019t you with your group?"
+      OpponentText: "Not the sharpest tool, but I like the nativity, I\u2019m thinking
+        of your offer right now."
     - IsPositiveOption: 0
       StressToAdd: 100
-      PlayerText: Great! Could you bring those people over here then?
-      OpponentText: "I mean\u2026 never mind, I think I am getting a call from work.
-        (Bev says as he takes a step away and does not return.)"
+      PlayerText: Oatty, would it not be better to join Bev? I swear I will pull
+        my weight.
+      OpponentText: "So it\u2019s just Bev and you? In that case I am better off
+        failing on my own than with a weak group. Best of luck."
+    - IsPositiveOption: 1
+      StressToAdd: 0
+      PlayerText: The game is going to be amazing, I swear, please join us! (Gi claps
+        their hands together along with a bow.)
+      OpponentText: "I\u2019m not into all that formal stuff, get up! It\u2019s frankly
+        embarrassing! (Gi quickly gets up, but can see Oatty blush slightly.)"
