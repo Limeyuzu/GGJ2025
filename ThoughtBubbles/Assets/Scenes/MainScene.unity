@@ -781,118 +781,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 033e464852b11c2468ab17da14d52cda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &454174469
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 454174470}
-  - component: {fileID: 454174471}
-  m_Layer: 0
-  m_Name: Biv
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &454174470
+--- !u!4 &454174470 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 7732272013743302799, guid: fd1522c447b09274f94119ef27988439, type: 3}
+  m_PrefabInstance: {fileID: 151216025755825159}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454174469}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1947187223}
-  - {fileID: 936421823}
-  m_Father: {fileID: 1118741397}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &454174471
+--- !u!114 &454174471 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 8054273542878076269, guid: fd1522c447b09274f94119ef27988439, type: 3}
+  m_PrefabInstance: {fileID: 151216025755825159}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454174469}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: feae21ee02ad4874b9d7e916a47a30d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sprite: {fileID: 1947187224}
-  AltSprite: {fileID: 936421824}
-  Interactions:
-  - Prompt: "Before I forget, my name is Bev, what\u2019s your name?"
-    Responses:
-    - IsPositiveOption: 1
-      StressToAdd: 0
-      PlayerText: "My name is Gi, I\u2019m currently looking for a group to join
-        up."
-      OpponentText: "Ah, that\u2019s a cool name. Hopefully this year is easier to
-        join up in a group. (Smiles)"
-    - IsPositiveOption: 0
-      StressToAdd: 10
-      PlayerText: Sorry, what was that?
-      OpponentText: "It\u2019s\u2026 nevermind, don\u2019t worry about it"
-    - IsPositiveOption: 0
-      StressToAdd: 0
-      PlayerText: Choyabonga bro.
-      OpponentText: "Confused look I\u2019m squarely in gen z, the boomers are down
-        the hallway."
-    - IsPositiveOption: 1
-      StressToAdd: 0
-      PlayerText: Nah, looking for a group more like.
-      OpponentText: "That makes sense, looks at Gi\u2019s name card. Don\u2019t sweat
-        it Gi, you look capable. (Smiles)"
-    - IsPositiveOption: 0
-      StressToAdd: 100
-      PlayerText: Do you like, spit and lick yourself?
-      OpponentText: "(Disgusted) Yeah no, maybe I\u2019ll find someone else."
-    - IsPositiveOption: 0
-      StressToAdd: 10
-      PlayerText: "I\u2019m Sir Gi, of house Dragonhorn, Heir to be the head of house."
-      OpponentText: Ah, too much Game of Crowns huh?
-  - Prompt: "Anyway, (he checks his phone before sliding it back.) And there goes
-      the other people who were looking for one more person. (Biv pulls a seat towards
-      him, taking a seat. He offers a seat to Gi to sit down, Gi goes\u2026)"
-    Responses:
-    - IsPositiveOption: 1
-      StressToAdd: 2
-      PlayerText: So what kind of game engine do you know?
-      OpponentText: More experienced in United, but I can do Real9 Engine too.
-    - IsPositiveOption: 1
-      StressToAdd: 0
-      PlayerText: (Sit down.) Would you be interested in making a group with me?
-      OpponentText: I thought you would never ask. (Biv smiles.)
-    - IsPositiveOption: 1
-      StressToAdd: 0
-      PlayerText: "(Sit down.) I\u2019ll likely just follow you around if that makes
-        finding a group easier."
-      OpponentText: "I can work with that, let\u2019s see who\u2019s available then."
-    - IsPositiveOption: 1
-      StressToAdd: 0
-      PlayerText: "(Look around.) There still seems to be people who haven\u2019t
-        found a group yet."
-      OpponentText: "Then let\u2019s ring them in (Biv shrugs, before chuckling to
-        himself.)"
-    - IsPositiveOption: 1
-      StressToAdd: 0
-      PlayerText: (Look at Biv.) How many Game Jams have you gone to?
-      OpponentText: Too many to count, so how about you follow me for now to see
-        what group we join? (Biv scratches his neck before looking around.)
-    - IsPositiveOption: 0
-      StressToAdd: 100
-      PlayerText: Great! Could you bring those people over here then?
-      OpponentText: "I mean\u2026 never mind, I think I am getting a call from work.
-        (Bev says as he takes a step away and does not return.)"
 --- !u!1 &506509055
 GameObject:
   m_ObjectHideFlags: 0
@@ -2055,81 +1959,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 883344325}
-  m_CullTransparentMesh: 1
---- !u!1 &936421822
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 936421823}
-  - component: {fileID: 936421825}
-  - component: {fileID: 936421824}
-  m_Layer: 0
-  m_Name: AltSprite
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &936421823
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 936421822}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 454174470}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &936421824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 936421822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 16d8d9f3862f23d489ac44dd4f82b2fc, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &936421825
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 936421822}
   m_CullTransparentMesh: 1
 --- !u!1 &973479713
 GameObject:
@@ -3427,81 +3256,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787177093}
   m_CullTransparentMesh: 1
---- !u!1 &1947187222
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1947187223}
-  - component: {fileID: 1947187225}
-  - component: {fileID: 1947187224}
-  m_Layer: 0
-  m_Name: MainSprite
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1947187223
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1947187222}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 454174470}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1947187224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1947187222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3c38fa2f0b7ee0c49bc9e98f30d33ada, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1947187225
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1947187222}
-  m_CullTransparentMesh: 1
 --- !u!1 &2031650853
 GameObject:
   m_ObjectHideFlags: 0
@@ -3754,6 +3508,63 @@ RectTransform:
   m_AnchoredPosition: {x: 2, y: -421}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &151216025755825159
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1118741397}
+    m_Modifications:
+    - target: {fileID: 1424331228148730386, guid: fd1522c447b09274f94119ef27988439, type: 3}
+      propertyPath: m_Name
+      value: Biv
+      objectReference: {fileID: 0}
+    - target: {fileID: 7732272013743302799, guid: fd1522c447b09274f94119ef27988439, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7732272013743302799, guid: fd1522c447b09274f94119ef27988439, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7732272013743302799, guid: fd1522c447b09274f94119ef27988439, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7732272013743302799, guid: fd1522c447b09274f94119ef27988439, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7732272013743302799, guid: fd1522c447b09274f94119ef27988439, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7732272013743302799, guid: fd1522c447b09274f94119ef27988439, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7732272013743302799, guid: fd1522c447b09274f94119ef27988439, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7732272013743302799, guid: fd1522c447b09274f94119ef27988439, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7732272013743302799, guid: fd1522c447b09274f94119ef27988439, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7732272013743302799, guid: fd1522c447b09274f94119ef27988439, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fd1522c447b09274f94119ef27988439, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
