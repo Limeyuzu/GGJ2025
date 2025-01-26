@@ -952,8 +952,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Some text that they say
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1bb44a93dacd4fd49b0745791ac391c8, type: 2}
+  m_sharedMaterial: {fileID: 928215489792751151, guid: 1bb44a93dacd4fd49b0745791ac391c8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -983,7 +983,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -2292,8 +2292,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Some text that you say
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1bb44a93dacd4fd49b0745791ac391c8, type: 2}
+  m_sharedMaterial: {fileID: 928215489792751151, guid: 1bb44a93dacd4fd49b0745791ac391c8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2323,7 +2323,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -3235,6 +3235,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3041313534111119588, guid: 34c86b5c2cf1eb44d948dd3ec759e826, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 1bb44a93dacd4fd49b0745791ac391c8, type: 2}
+    - target: {fileID: 3041313534111119588, guid: 34c86b5c2cf1eb44d948dd3ec759e826, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 928215489792751151, guid: 1bb44a93dacd4fd49b0745791ac391c8, type: 2}
+    - target: {fileID: 3041313534111119588, guid: 34c86b5c2cf1eb44d948dd3ec759e826, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4071743252100745012, guid: 34c86b5c2cf1eb44d948dd3ec759e826, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3609,8 +3621,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: This is the prompt
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1bb44a93dacd4fd49b0745791ac391c8, type: 2}
+  m_sharedMaterial: {fileID: 928215489792751151, guid: 1bb44a93dacd4fd49b0745791ac391c8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
