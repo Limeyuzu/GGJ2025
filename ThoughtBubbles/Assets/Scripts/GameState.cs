@@ -4,14 +4,14 @@ using UnityEngine;
 public class GameState : MonoBehaviour
 {
     // Game setup
-    [SerializeField] List<string> CharacterOrder = new() { "Biv" };
+    [SerializeField] List<Character> CharacterOrder;
     [SerializeField] UIController UIController;
 
     // Character state
     public int Stress = 0;
 
     // Game state
-    private int _currentOpponent = 0;
+    private int _currentOpponentIndex = 0;
     private int _currentOpponentInteraction = 0;
     private int _currentOpponentPositiveInteractions = 0;
     private Dialogue _lastResolvedDialogue;
@@ -20,7 +20,8 @@ public class GameState : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        InitCharacter();
+        _currentCharacter = CharacterOrder[_currentOpponentIndex];
+        GoToNextInteraction();
     }
 
     public void GoToNextInteraction()
@@ -30,8 +31,17 @@ public class GameState : MonoBehaviour
 
         if (!HasNextInteraction())
         {
-            Debug.Log("Reached end of character!");
-            return;
+            if (HasNextCharacter())
+            {
+                _currentOpponentInteraction = 0;
+                _currentOpponentIndex++;
+                _currentCharacter = CharacterOrder[_currentOpponentIndex];
+            } 
+            else
+            {
+                Debug.Log("End of game, you win");
+                return;
+            }
         }
 
         UIController.GoToDialogueView();
@@ -74,13 +84,9 @@ public class GameState : MonoBehaviour
         }
     }
 
-    private void InitCharacter()
-    {
-        _currentCharacter = GameObject.Find(CharacterOrder[_currentOpponent]).GetComponent<Character>();
-        GoToNextInteraction();
-    }
-
     private bool HasNextInteraction() => _currentOpponentInteraction < _currentCharacter.GetInteractions().Count;
+
+    private bool HasNextCharacter() => _currentOpponentIndex + 1 < CharacterOrder.Count;
 
     private Interaction GetNextInteraction()
     {
