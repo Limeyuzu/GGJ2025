@@ -124,69 +124,58 @@ MonoBehaviour:
   Sprite: {fileID: 5266860027491918080}
   AltSprite: {fileID: 3745610634262385951}
   Interactions:
-  - Prompt: "Before I forget, my name is Bev, what\u2019s your name?"
+  - Prompt: (Gi shuffles to the next isolated man. Before long, a tall dog stops you in your tracks). Hey. I know you (pointing at Biv), but I haven\u2019t been introduced to you. (His head casts a long shadow over you)
     Responses:
     - IsPositiveOption: 1
       StressToAdd: 0
-      PlayerText: "My name is Gi, I\u2019m currently looking for a group to join
-        up."
-      OpponentText: "Ah, that\u2019s a cool name. Hopefully this year is easier to
-        join up in a group. (Smiles)"
-    - IsPositiveOption: 0
-      StressToAdd: 10
-      PlayerText: Sorry, what was that?
-      OpponentText: "It\u2019s\u2026 nevermind, don\u2019t worry about it"
-    - IsPositiveOption: 0
-      StressToAdd: 0
-      PlayerText: Choyabonga bro.
-      OpponentText: "Confused look I\u2019m squarely in gen z, the boomers are down
-        the hallway."
+      PlayerText: "Straight to the point, uh yes, ahem, my name is G-Gi. What\u2019s yours?"
+      OpponentText: "Yeah alright, some good respect from you. I go by Zoro."
+    - IsPositiveOption: 1
+      StressToAdd: 5
+      PlayerText: Has your nose ever touched the sky before?
+      OpponentText: "It actually has! (He bonks Gi\u2019s head with his nose). Hah, does it hurt?"
     - IsPositiveOption: 1
       StressToAdd: 0
-      PlayerText: Nah, looking for a group more like.
-      OpponentText: "That makes sense, looks at Gi\u2019s name card. Don\u2019t sweat
-        it Gi, you look capable. (Smiles)"
+      PlayerText: My name is Gi; me and Biv are looking to make a group.
+      OpponentText: "And here I thought I was the straightforward one here, huh. Good."
+    - IsPositiveOption: 1
+      StressToAdd: 10
+      PlayerText: Ooo, two experienced Devs in the group, what a time to be alive!
+      OpponentText: "Huh? I do suppose I have released a few quadruple A titles..."
     - IsPositiveOption: 0
       StressToAdd: 100
-      PlayerText: Do you like, spit and lick yourself?
-      OpponentText: "(Disgusted) Yeah no, maybe I\u2019ll find someone else."
+      PlayerText: What Game Engine do you use?
+      OpponentText: Why ask? Pfft (He takes a step to the side, then walks away)
     - IsPositiveOption: 0
-      StressToAdd: 10
-      PlayerText: "I\u2019m Sir Gi, of house Dragonhorn, Heir to be the head of house."
-      OpponentText: Ah, too much Game of Crowns huh?
-  - Prompt: "Anyway, (he checks his phone before sliding it back.) And there goes
-      the other people who were looking for one more person. (Biv pulls a seat towards
-      him, taking a seat. He offers a seat to Gi to sit down, Gi goes\u2026)"
+      StressToAdd: 20
+      PlayerText: "I\u2019m actually a Princess of House Dragonhorn. But you can call me Gi."
+      OpponentText: Huh, I belong to House of Skull Ivory, so we\u2019re like mortal enemies then?” (he chuckles)
+  - Prompt: "So, have you two got any ideas for the theme? It\u2019s frankly broad with what you can do with it. (His noise flicks between Gi and Biv)"
     Responses:
-    - IsPositiveOption: 1
+    - IsPositiveOption: 0
       StressToAdd: 2
-      PlayerText: So what kind of game engine do you know?
-      OpponentText: More experienced in United, but I can do Real9 Engine too.
-    - IsPositiveOption: 1
-      StressToAdd: 0
-      PlayerText: (Sit down.) Would you be interested in making a group with me?
-      OpponentText: I thought you would never ask. (Biv smiles.)
-    - IsPositiveOption: 1
-      StressToAdd: 0
-      PlayerText: "(Sit down.) I\u2019ll likely just follow you around if that makes
-        finding a group easier."
-      OpponentText: "I can work with that, let\u2019s see who\u2019s available then."
-    - IsPositiveOption: 1
-      StressToAdd: 0
-      PlayerText: "(Look around.) There still seems to be people who haven\u2019t
-        found a group yet."
-      OpponentText: "Then let\u2019s ring them in (Biv shrugs, before chuckling to
-        himself.)"
-    - IsPositiveOption: 1
-      StressToAdd: 0
-      PlayerText: (Look at Biv.) How many Game Jams have you gone to?
-      OpponentText: Too many to count, so how about you follow me for now to see
-        what group we join? (Biv scratches his neck before looking around.)
+      PlayerText: Maybe we can focus on the idea after getting a group together?
+      OpponentText: Fair point. It\u2019s a group project, not a personal endeavour. Though my game is going very well, thank you for asking.
     - IsPositiveOption: 0
+      StressToAdd: 20
+      PlayerText: The theme didn\u2019t sound too difficult.. We\u2019ll see what the others think?
+      OpponentText: Others? I mean if you see more than the three of us, there\u2019s a mental hospital down the road.
+    - IsPositiveOption: 1
+      StressToAdd: 0
+      PlayerText: Uhhh hey Biv, do you have any ideas? (Gi turns to Biv).
+      OpponentText: "I remember you were good at making iedas in the last Jam. The problem is getting those things into a workable state."
+    - IsPositiveOption: 1
       StressToAdd: 100
-      PlayerText: Great! Could you bring those people over here then?
-      OpponentText: "I mean\u2026 never mind, I think I am getting a call from work.
-        (Bev says as he takes a step away and does not return.)"
+      PlayerText: Ooo, I have an idea where-- (Gi begins to discuss their idea at length)
+      OpponentText: With a home run like that, I don\u2019t see any room for my own designs. (He chuckles, and leaves with a wink) 
+    - IsPositiveOption: 1
+      StressToAdd: 20
+      PlayerText: (Gi ramages around their bag for the notebook they had made notes on)
+      OpponentText: Pfft, why take notes? All the best ideas come from fresh from the mind."
+    - IsPositiveOption: 0
+      StressToAdd: 0
+      PlayerText: Oh, I figured you would have ideas flowing like a river.
+      OpponentText: Yeah, I\u2019m definitely flowing away from this conversation. Best of luck Biv. (Zoro waves to Bev before making his way to the toilet)
 --- !u!1 &7987998828614681242
 GameObject:
   m_ObjectHideFlags: 0
